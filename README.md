@@ -16,6 +16,27 @@ The XML served is exactly:
 
 Reference: [Speak — Play a message](https://www.vobiz.ai/docs/xml/speak/play-a-message)
 
+## Live answer URL
+
+A running instance is currently reachable at:
+
+```
+https://integral-anthropology-shareholders-dietary.trycloudflare.com/answer
+```
+
+Set that as the **Answer URL** in your Vobiz application with method **GET**.
+The optional hangup webhook is `https://integral-anthropology-shareholders-dietary.trycloudflare.com/hangup`.
+
+Check it before relying on it:
+
+```bash
+curl "https://integral-anthropology-shareholders-dietary.trycloudflare.com/answer"
+```
+
+> This is a `trycloudflare.com` quick tunnel, so the hostname disappears when
+> the tunnel restarts. If the `curl` above fails, follow the quick start below
+> to run your own and generate a fresh URL.
+
 ## How it works
 
 ```
@@ -180,6 +201,11 @@ In the Vobiz console, edit your application and set:
 - **Answer URL:** `https://<your-tunnel-host>/answer`
 - **Method:** `GET`
 - **Hangup URL** (optional): `https://<your-tunnel-host>/hangup`
+
+Using the instance already running, that is:
+
+- **Answer URL:** `https://integral-anthropology-shareholders-dietary.trycloudflare.com/answer`
+- **Method:** `GET`
 
 Then call the number attached to that application. You should hear the message.
 
